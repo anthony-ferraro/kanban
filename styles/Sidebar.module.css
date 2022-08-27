@@ -1,0 +1,26 @@
+.sidebar {
+  flex-shrink: 0;
+  background-color: white;
+  width: 300px;
+  border-right: 1px var(--lines-light) solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.logo {
+  height: 97px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=Sidebar.module.css.map */

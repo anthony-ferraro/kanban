@@ -1,0 +1,35 @@
+.header {
+  width: 100%;
+  height: 97px;
+  background: white;
+  border-bottom: 1px var(--lines-light) solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.rightWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.rightWrapper button {
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.verticalDots {
+  flex-shrink: 0;
+  color: var(--medium-grey);
+  display: inline-flex;
+  font-size: 25px;
+  padding: 7px 0px;
+  border-radius: 50px;
+  transition: background-color 0.25s auto;
+}
+.verticalDots:hover {
+  background-color: rgba(168, 164, 255, 0.2);
+  cursor: pointer;
+}/*# sourceMappingURL=Header.module.css.map */

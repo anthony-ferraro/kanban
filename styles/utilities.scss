@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap');
+
+:root {
+    --main-purple: #635FC7;
+    --main-purple-hover: #A8A4FF;
+    --black: #000112;
+    --very-dark-grey: #20212C;
+    --dark-grey: #2B2C37;
+    --lines-dark: #3E3F4E;
+    --lines-light: #E4EBFA;
+    --medium-grey: #828FA3;
+    --light-grey: #F4F7FD;
+    --white: #FFFFFF;
+    --red: #EA5555;
+    --red-hover: #FF9898;
+}
+
+.disabled {
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+//typography
+
+.heading-XL {
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.heading-L {
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.heading-M {
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 19px;
+}
+
+.heading-S {
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 2.4px;
+}
+
+.body-L {
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 23px;
+}
+
+.body-M {
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+//buttons
+
+button {
+    @extend .body-L;
+    text-align: center;
+    border-radius: 20px;
+    // min-height: 40px;
+    // min-width: 255px;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    &.btn-large {
+        @extend .heading-M;
+        border-radius: 24px;
+        // min-height: 48px;
+        // min-width: 255px;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.btn-primary {
+    background: var(--main-purple);
+    color: white;
+    &:hover {
+        background: var(--main-purple-hover);
+    }
+}
+
+.btn-secondary {
+    background: rgba(99, 95, 199, 0.1);
+    color: var(--main-purple);
+    &:hover {
+        background: rgba(99, 95, 199, 0.25);
+    }
+}
+
+.btn-destroy {
+    background: var(--red);
+    color: white;
+    &:hover {
+        background: var(--red-hover);
+    }
+}
