@@ -1,3 +1,4 @@
+@import './utilities.scss';
 .header {
     width: 100%;
     height: 97px;
@@ -7,6 +8,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-shrink: 0;
     padding: 10px 20px;
 }
 

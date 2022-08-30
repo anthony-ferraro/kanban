@@ -1,0 +1,51 @@
+@import './utilities.scss';
+.boardsList {
+    width: 100%;
+
+    >p {
+        padding-left: 20px;
+        padding-bottom: 10px;
+    }
+}
+
+.boardsList>ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    width: 92%;
+}
+
+.board {
+    flex-shrink: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    border-radius: 0px 100px 100px 0px;
+
+    >p {
+        @extend .c-medium-grey;
+        font-family: 'Plus Jakarta Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    &.active {
+        background-color: var(--main-purple);
+        >p {
+            color: white;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+}

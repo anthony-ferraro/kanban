@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <div className={styles.header}>
             <p className="heading-XL">
-                No Boards
+                Platform Launch
             </p>
             <div className={styles.rightWrapper}>
                 <button className="button btn-primary">+ Add New Task</button>
