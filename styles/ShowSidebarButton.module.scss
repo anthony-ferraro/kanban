@@ -1,0 +1,19 @@
+@import './utilities.scss';
+.showSidebarButton {
+    position: fixed;
+    bottom: 20px;
+    width: 56px;
+    height: 48px;
+    border-radius: 0px 100px 100px 0px;
+    border: none;
+    outline: none;
+    @extend .bg-main-purple;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        @extend .bg-main-purple-hover;
+        cursor: pointer;
+    }
+}

@@ -24,7 +24,7 @@
   line-height: 23px;
 }
 
-.heading-M, .button.btn-large, .button {
+.heading-M, .button.btn-large, .btn-large.newTaskButton, .button, .newTaskButton {
   font-family: "Plus Jakarta Sans";
   font-style: normal;
   font-weight: 700;
@@ -57,25 +57,25 @@
   line-height: 15px;
 }
 
-.button {
+.button, .newTaskButton {
   text-align: center;
   border-radius: 20px;
   border: none;
   outline: none;
   padding: 10px 20px;
 }
-.button.btn-large {
+.button.btn-large, .btn-large.newTaskButton {
   border-radius: 24px;
 }
-.button:hover {
+.button:hover, .newTaskButton:hover {
   cursor: pointer;
 }
 
-.btn-primary {
+.btn-primary, .newTaskButton {
   background: var(--main-purple);
   color: white;
 }
-.btn-primary:hover {
+.btn-primary:hover, .newTaskButton:hover {
   background: var(--main-purple-hover);
 }
 

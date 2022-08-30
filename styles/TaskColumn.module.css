@@ -102,7 +102,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .tasksList {
@@ -114,7 +114,6 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 20px;
   overflow-y: scroll;
 }
 

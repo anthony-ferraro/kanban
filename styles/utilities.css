@@ -3,6 +3,22 @@
   color: var(--medium-grey);
 }
 
+.c-main-purple {
+  color: var(--main-purple);
+}
+
+.bg-main-purple {
+  background-color: var(--main-purple);
+}
+
+.bg-main-purple-hover {
+  background-color: var(--main-purple-hover);
+}
+
+.bg-light-grey {
+  background-color: var(--light-grey);
+}
+
 .disabled {
   opacity: 0.25;
   pointer-events: none;

@@ -6,6 +6,9 @@ const TaskColumnsList = ({ data, activeBoard }) => {
         return (
             <div className={styles.taskColumnsList}>
                 {data.boards[activeBoard].columns.map((column, index) => <TaskColumn key={index} column={column}></TaskColumn>)}
+                <div className={styles.newTaskColumnPanel}>
+                    <p>+ New Column</p>
+                </div>
             </div>
         )
     } else {

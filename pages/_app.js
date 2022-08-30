@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
 import TaskColumnsList from '../components/TaskColumnsList';
+import ShowSidebarButton from '../components/ShowSidebarButton';
 
 import { useState, useEffect } from 'react';
 function MyApp({ Component, pageProps }) {
@@ -9,6 +10,7 @@ function MyApp({ Component, pageProps }) {
   const dataPath = "/data.json";
   const [activeBoard, setActiveBoard] = useState(0);
   const [data, setData] = useState();
+  const [sidebarVisible, setSidebarVisible]  = useState(true)
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(dataPath);
@@ -21,9 +23,15 @@ function MyApp({ Component, pageProps }) {
 
   return <>
     <div className="container">
-      <Sidebar data={data} activeBoard={activeBoard} setActiveBoard={setActiveBoard}></Sidebar>
+      {(() => {
+        if(sidebarVisible) {
+          return <Sidebar data={data} activeBoard={activeBoard} setActiveBoard={setActiveBoard} setSidebarVisible = {setSidebarVisible}></Sidebar>
+        } else {
+          return <ShowSidebarButton setSidebarVisible={setSidebarVisible}></ShowSidebarButton>
+        }
+      })()}
       <div className="main">
-        <Header></Header>
+        <Header activeBoard={activeBoard} data={data}></Header>
         <TaskColumnsList data={data} activeBoard={activeBoard}></TaskColumnsList>
         <Component {...pageProps} />
       </div>

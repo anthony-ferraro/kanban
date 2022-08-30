@@ -136,6 +136,7 @@
 .board.active > p {
   color: white;
 }
-.board:hover {
+.board:not(.active):hover {
+  background-color: rgba(168, 164, 255, 0.2);
   cursor: pointer;
 }/*# sourceMappingURL=BoardsList.module.css.map */

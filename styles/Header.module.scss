@@ -35,3 +35,8 @@
         cursor: pointer;
     }
 }
+
+.newTaskButton {
+    @extend .button;
+    @extend .btn-primary;
+}
