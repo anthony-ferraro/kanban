@@ -1,11 +1,12 @@
 @import './utilities.scss';
 .taskColumnsList {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     width: auto;
     flex-grow: 1;
     height: 100%;
-    // max-width: inherit;
     overflow-x: scroll;
-    overflow-y: hidden;
     max-height: inherit;
     display: flex;
     flex-direction: row;
@@ -13,7 +14,8 @@
 }
 
 .newTaskColumnPanel {
-    @extend .c-medium-grey;
+    @extend .c-text-2;
+    @extend .bg-main-bg-3;
     @extend .heading-XL;
     width: 280px;
     max-height: 100%;
@@ -21,10 +23,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #E9EFFA;
     border-radius: 6px;
+    border: 2px var(--text-2) dashed;
     &:hover {
         cursor: pointer; 
-        background-color: #e1e9f8;
+        @extend .c-main-purple;
+        border-color: var(--main-purple);
     }
 }

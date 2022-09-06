@@ -1,6 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap");
-.c-medium-grey {
-  color: var(--medium-grey);
+.c-text-1 {
+  color: var(--text-1);
+}
+
+.c-text-2 {
+  color: var(--text-2);
+}
+
+.c-main-purple {
+  color: var(--main-purple);
+}
+
+.bg-main-purple {
+  background-color: var(--main-purple);
+}
+
+.bg-main-purple-hover {
+  background-color: var(--main-purple-hover);
+}
+
+.bg-main-bg-1 {
+  background-color: var(--main-bg-1);
+}
+
+.bg-main-bg-2, .container {
+  background-color: var(--main-bg-2);
+}
+
+.bg-main-bg-3 {
+  background-color: var(--main-bg-3);
 }
 
 .disabled {
@@ -98,16 +126,14 @@
 :root {
   --main-purple: #635FC7;
   --main-purple-hover: #A8A4FF;
-  --black: #000112;
-  --very-dark-grey: #20212C;
-  --dark-grey: #2B2C37;
-  --lines-dark: #3E3F4E;
-  --lines-light: #E4EBFA;
-  --medium-grey: #828FA3;
-  --light-grey: #F4F7FD;
-  --white: #FFFFFF;
   --red: #EA5555;
   --red-hover: #FF9898;
+  --main-bg-1: #FFFFFF;
+  --main-bg-2: #F4F7FD;
+  --main-bg-3: #E9EFFA;
+  --lines: #E4EBFA;
+  --text-1: #000112;
+  --text-2: #828FA3;
 }
 
 /* Box sizing rules */
@@ -200,7 +226,6 @@ div#__next > div {
 .container {
   display: flex;
   flex-direction: row;
-  background-color: #F4F7FD;
   height: 100%;
   max-height: 100%;
   width: 100%;
@@ -213,8 +238,5 @@ div#__next > div {
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 20px;
   padding-bottom: 20px;
-  padding-top: 20px;
-  padding-left: 20px;
 }/*# sourceMappingURL=globals.css.map */

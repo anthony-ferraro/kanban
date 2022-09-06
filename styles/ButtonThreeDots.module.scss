@@ -1,0 +1,14 @@
+@import './utilities.scss';
+.verticalDots {
+    flex-shrink: 0;
+    @extend .c-text-2;
+    display: inline-flex;
+    font-size: 25px;
+    padding: 7px 0px;
+    border-radius: 50px;
+    transition: background-color 0.25s auto;
+    &:hover {
+        background-color: rgba(168, 164, 255, 0.2);
+        cursor: pointer;
+    }
+}

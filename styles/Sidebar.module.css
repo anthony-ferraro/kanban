@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap");
-.c-medium-grey, .hideSidebarButton {
-  color: var(--medium-grey);
+.c-text-1 {
+  color: var(--text-1);
+}
+
+.c-text-2, .hideSidebarButton {
+  color: var(--text-2);
 }
 
 .c-main-purple, .hideSidebarButton:hover {
@@ -15,8 +19,16 @@
   background-color: var(--main-purple-hover);
 }
 
-.bg-light-grey, .toggleThemePanel {
-  background-color: var(--light-grey);
+.bg-main-bg-1, .sidebar {
+  background-color: var(--main-bg-1);
+}
+
+.bg-main-bg-2, .toggleThemePanel {
+  background-color: var(--main-bg-2);
+}
+
+.bg-main-bg-3 {
+  background-color: var(--main-bg-3);
 }
 
 .disabled {
@@ -113,13 +125,18 @@
 
 .sidebar {
   flex-shrink: 0;
-  background-color: white;
   width: 300px;
-  border-right: 1px var(--lines-light) solid;
+  border-right: 1px var(--lines) solid;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin-left: 0%;
+  transition: margin-left 0.25s ease;
+  transition-delay: 0s;
+}
+.sidebar.hidden {
+  margin-left: -300px;
 }
 
 .top {

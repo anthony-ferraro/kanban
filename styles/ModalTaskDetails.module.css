@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap");
-.c-text-1, .title {
+.c-text-1, .subtask > p, .title {
   color: var(--text-1);
 }
 
-.c-text-2, .completed {
+.c-text-2, .statusSection > p, .subtask.complete > p, .completed, .description {
   color: var(--text-2);
 }
 
@@ -19,11 +19,11 @@
   background-color: var(--main-purple-hover);
 }
 
-.bg-main-bg-1, .task {
+.bg-main-bg-1, .modalTaskDetails {
   background-color: var(--main-bg-1);
 }
 
-.bg-main-bg-2 {
+.bg-main-bg-2, .subtask {
   background-color: var(--main-bg-2);
 }
 
@@ -44,7 +44,7 @@
   line-height: 30px;
 }
 
-.heading-L {
+.heading-L, .title {
   font-family: "Plus Jakarta Sans";
   font-style: normal;
   font-weight: 700;
@@ -52,7 +52,7 @@
   line-height: 23px;
 }
 
-.heading-M, .title, .button.btn-large, .button {
+.heading-M, .button.btn-large, .button {
   font-family: "Plus Jakarta Sans";
   font-style: normal;
   font-weight: 700;
@@ -69,7 +69,7 @@
   letter-spacing: 2.4px;
 }
 
-.body-L {
+.body-L, .description {
   font-family: "Plus Jakarta Sans";
   font-style: normal;
   font-weight: 500;
@@ -77,7 +77,7 @@
   line-height: 23px;
 }
 
-.body-M, .completed {
+.body-M, .statusSection > p, .subtask > p, .completed {
   font-family: "Plus Jakarta Sans";
   font-style: normal;
   font-weight: 700;
@@ -123,27 +123,74 @@
   background: var(--red-hover);
 }
 
-.task {
-  width: 280px;
-  min-height: 80px;
-  padding: 23px 16px;
-  box-shadow: 0px 4px 6px rgba(54, 78, 126, 0.101545);
-  border-radius: 8px;
-  flex-shrink: 0;
+.modalTaskDetails {
+  width: 480px;
+  height: 523px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  margin-bottom: 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 32px;
 }
-.task:hover {
-  cursor: pointer;
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .title {
-  font-weight: bold;
+  width: 80%;
+}
+
+.description {
+  margin-top: 25px;
 }
 
 .completed {
   font-weight: 700;
-}/*# sourceMappingURL=Task.module.css.map */
+}
+
+.subtasksSection {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.subtasksList {
+  width: 100%;
+  padding: 0;
+  padding-top: 10px;
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.subtask {
+  width: 100%;
+  border-radius: 4px;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.subtask.complete > p {
+  text-decoration: line-through;
+}
+.subtask:hover {
+  cursor: pointer;
+  background-color: var(--main-purple);
+}
+
+.statusSection {
+  margin-top: 25px;
+  width: 100%;
+}
+.statusSection > p {
+  margin-bottom: 5px;
+}/*# sourceMappingURL=ModalTaskDetails.module.css.map */

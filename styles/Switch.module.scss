@@ -1,0 +1,28 @@
+@import './utilities.scss';
+
+.switch {
+    width: 40px;
+    height: 20px;
+    padding: 3px;
+    border-radius: 12px;
+    @extend .bg-main-purple;
+    position: relative;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.handle {
+    position: absolute;
+    background-color: white;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    top: calc(50% - 7px);
+    left: 3px;
+    transition: left 0.1s linear;
+    &.activated {
+        left: 23px;
+    }
+}

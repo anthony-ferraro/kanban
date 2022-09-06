@@ -3,7 +3,7 @@
     width: 280px;
     min-height: 80px;
     padding: 23px 16px;
-    background: #FFFFFF;
+    @extend .bg-main-bg-1;
     box-shadow: 0px 4px 6px rgba(54, 78, 126, 0.101545);
     border-radius: 8px;
     flex-shrink: 0;
@@ -19,11 +19,12 @@
 
 .title {
     font-weight: bold;
+    @extend .c-text-1;
     @extend .heading-M;
 }
 
 .completed {
     @extend .body-M;
-    @extend .c-medium-grey;
+    @extend .c-text-2;
     font-weight: 700;
 }

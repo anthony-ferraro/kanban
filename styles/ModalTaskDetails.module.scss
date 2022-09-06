@@ -1,0 +1,92 @@
+@import './utilities.scss';
+
+.modalTaskDetails {
+    width: 480px;
+    height: 523px;
+    @extend .bg-main-bg-1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 32px;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.title {
+    width: 80%;
+    @extend .heading-L;
+    @extend .c-text-1;
+}
+
+.description {
+    @extend .body-L;
+    @extend .c-text-2;
+    margin-top: 25px;
+}
+
+.completed {
+    @extend .body-M;
+    @extend .c-text-2;
+    font-weight: 700;
+}
+
+.subtasksSection {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.subtasksList {
+    width: 100%;
+    padding: 0;
+    padding-top: 10px;
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.subtask {
+    @extend .bg-main-bg-2;
+    width: 100%;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    >p {
+        @extend .c-text-1;
+        @extend .body-M;
+    }
+
+    &.complete {
+        >p {
+            @extend .c-text-2;
+            text-decoration: line-through;
+        }
+    }
+    &:hover {
+        cursor: pointer;
+        background-color: var(--main-purple);
+    }
+}
+
+.statusSection {
+    margin-top: 25px;
+    width: 100%;
+    >p {
+        @extend .c-text-2;
+        @extend .body-M;
+        margin-bottom: 5px;
+    }
+}

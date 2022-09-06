@@ -1,0 +1,12 @@
+@import './utilities.scss';
+
+.modalCreateNewBoard {
+    width: 480px;
+    height: 429px;
+    border-radius: 6px;
+    @extend .bg-main-bg-1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+}

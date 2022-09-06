@@ -2,14 +2,17 @@
 .header {
     width: 100%;
     height: 97px;
-    background: white;
-    border-bottom: 1px var(--lines-light) solid;
+    @extend .bg-main-bg-1;
+    border-bottom: 1px var(--lines) solid;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
     padding: 10px 20px;
+    > p {
+        @extend .c-text-1;
+    }
 }
 
 .rightWrapper {
@@ -24,7 +27,7 @@
 
 .verticalDots {
     flex-shrink: 0;
-    color: var(--medium-grey);
+    @extend .c-text-2;
     display: inline-flex;
     font-size: 25px;
     padding: 7px 0px;

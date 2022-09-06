@@ -18,12 +18,12 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    overflow-y: scroll;
+    // overflow-y: scroll;
 }
 
 .columnName {
     @extend .heading-S;
-    @extend .c-medium-grey;
+    @extend .c-text-2;
     text-transform: uppercase;
     margin-bottom: 10px;
 }

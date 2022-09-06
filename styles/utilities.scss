@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap');
 
-.c-medium-grey {
-    color: var(--medium-grey);
+.c-text-1 {
+    color: var(--text-1);
+}
+
+.c-text-2 {
+    color: var(--text-2);
 }
 
 .c-main-purple {
@@ -16,9 +20,18 @@
     background-color: var(--main-purple-hover);
 }
 
-.bg-light-grey {
-    background-color: var(--light-grey);
+.bg-main-bg-1 {
+    background-color: var(--main-bg-1);
 }
+
+.bg-main-bg-2 {
+    background-color: var(--main-bg-2);
+}
+
+.bg-main-bg-3 {
+    background-color: var(--main-bg-3);
+}
+
 .disabled {
     opacity: 0.25;
     pointer-events: none;
@@ -84,10 +97,12 @@
     border: none;
     outline: none;
     padding: 10px 20px;
+
     &.btn-large {
         @extend .heading-M;
         border-radius: 24px;
     }
+
     &:hover {
         cursor: pointer;
     }
@@ -96,6 +111,7 @@
 .btn-primary {
     background: var(--main-purple);
     color: white;
+
     &:hover {
         background: var(--main-purple-hover);
     }
@@ -104,6 +120,7 @@
 .btn-secondary {
     background: rgba(99, 95, 199, 0.1);
     color: var(--main-purple);
+
     &:hover {
         background: rgba(99, 95, 199, 0.25);
     }
@@ -112,6 +129,7 @@
 .btn-destroy {
     background: var(--red);
     color: white;
+
     &:hover {
         background: var(--red-hover);
     }

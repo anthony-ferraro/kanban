@@ -6,7 +6,7 @@ const BoardsList = ({ data, activeBoard, setActiveBoard }) => {
         return (
             // <>{JSON.stringify(data)}</>
             <div className={styles.boardsList} >
-                <p className="c-medium-grey heading-M">ALL BOARDS ({boards.length})</p>
+                <p>ALL BOARDS ({boards.length})</p>
                 <ul role="list" >
                     {boards.map((board, index) =>
                         <>

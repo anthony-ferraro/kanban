@@ -4,6 +4,8 @@
     width: 100%;
 
     >p {
+        @extend .c-text-2;
+        @extend .heading-M;
         padding-left: 20px;
         padding-bottom: 10px;
     }
@@ -30,7 +32,7 @@
     border-radius: 0px 100px 100px 0px;
 
     >p {
-        @extend .c-medium-grey;
+        @extend .c-text-2;
         font-family: 'Plus Jakarta Sans';
         font-style: normal;
         font-weight: 700;
@@ -39,7 +41,7 @@
     }
 
     &.active {
-        background-color: var(--main-purple);
+        @extend .bg-main-purple;
 
         >p {
             color: white;

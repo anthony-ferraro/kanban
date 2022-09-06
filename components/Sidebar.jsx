@@ -1,25 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from '../styles/Sidebar.module.css';
 import BoardsList from './BoardsList';
 import IconLogoDark from './IconLogoDark';
+import IconLogoLight from './IconLogoLight';
 import IconHideSidebar from './IconHideSidebar';
 import Image from 'next/image';
-import Switch from "react-switch";
-const Sidebar = ({ data, activeBoard, setActiveBoard, setSidebarVisible }) => {
+import Switch from './Switch';
+const Sidebar = ({ data, activeBoard, setActiveBoard, sidebarVisible, setSidebarVisible, theme, setTheme }) => {
   return (
-    <div className={styles.sidebar}>
+    <div className={`${styles.sidebar} ${!sidebarVisible ? styles.hidden : ""}`}>
       <div className={styles.top}>
         <div className={styles.logo}>
-          <IconLogoDark width="160px" height="25px"></IconLogoDark>
+          {theme ? <IconLogoLight width="160px" height="25px"></IconLogoLight> : <IconLogoDark width="160px" height="25px"></IconLogoDark>}
         </div>
         <BoardsList activeBoard={activeBoard} setActiveBoard={setActiveBoard} data={data}></BoardsList>
       </div>
       <div className={styles.bottom}>
         <div className={styles.toggleThemePanel}>
           <Image src="/assets/icon-light-theme.svg" width="18px" height="18px"></Image>
-          <div className="switch">
-            <Switch offColor="#635FC7" onColor="#635FC7" checkedIcon={false} uncheckedIcon={false} onChange={() => console.log()}></Switch>
-          </div>
+          <Switch toggleState={theme} onToggle={() => setTheme(!theme)}></Switch>
           <Image src="/assets/icon-dark-theme.svg" width="15px" height="15px"></Image>
         </div>
         <button className={styles.hideSidebarButton} onClick={() => setSidebarVisible(false)}>
